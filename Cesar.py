@@ -17,7 +17,7 @@ class Cesar_class:
         self.words=self.tokenization_on_words(self.messege)
 
     def tokenization_on_words(self, string):
-        return re.findall(r'\b([-\w]+)\b', string)  # в строке text_str находит шаблон, прописанный слева
+        return re.findall(r'\b([-\w]+)\b', string)
 
     def code(self):
         return ' '.join([''.join([self.matching_letters[ch] for ch in word.lower()]) for word in self.words])
